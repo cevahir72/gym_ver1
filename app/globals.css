@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  --color-background: #F9F9F7;
+  --color-surface: #FFFFFF;
+  --color-primary: #1B2B5E;
+  --color-accent: #F26522;
+  --color-muted: #6E7C9B;
+  --color-on-background: #1A1C1B;
+  --color-on-primary: #FFFFFF;
+}
+
+@layer base {
+  html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-on-background);
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer utilities {
+  .bg-primary { background-color: var(--color-primary); }
+  .text-primary { color: var(--color-primary); }
+  .bg-accent { background-color: var(--color-accent); }
+  .text-accent { color: var(--color-accent); }
+  .bg-background { background-color: var(--color-background); }
+  .bg-surface { background-color: var(--color-surface); }
+  .text-muted { color: var(--color-muted); }
+  .text-on-background { color: var(--color-on-background); }
+}
