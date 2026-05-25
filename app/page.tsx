@@ -71,9 +71,11 @@ export default function Home() {
     setIsSubmitting(true);
 
     const message = encodeURIComponent(
-      `*Ön Kayıt Talebi - Cool Kids Sport Center*%0A%0AEbeveyn Adı Soyadı: ${parentName || "-"}%0AÇocuğun Yaşı: ${childAge || "-"}%0ATelefon: ${phone || "-"}%0Aİlgilenilen Branşlar: ${
-        selectedBranches.length > 0 ? selectedBranches.join(", ") : "-"
-      }%0AÜcretsiz Deneme Dersi İstiyorum: ${wantsTrial ? "Evet" : "Hayır"}`
+      `Merhaba Ben ${parentName || "-"},
+Telefon: ${phone || "-"}
+Çocuğum ${childAge || "-"} yaşları arasında.
+${selectedBranches.length > 0 ? selectedBranches.join(", ") : "-"} branşları ile ilgileniyoruz.
+${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
     );
     window.open(`https://wa.me/9005010076070?text=${message}`, "_blank", "noopener,noreferrer");
 
@@ -428,7 +430,7 @@ export default function Home() {
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="rounded-[1.75rem] border border-slate-200/80 bg-white p-6 shadow-[0_20px_40px_rgba(27,43,94,0.06)]">
                     <p className="text-sm font-semibold text-primary">Adresimiz</p>
-                    <p className="mt-3 text-sm text-muted">Bağlıca, Etimesgut, Ankara</p>
+                     <p className="mt-3 text-sm text-muted">Yeni Bağlıca Mah. Etimesgut Blv. No:28/5 Etimesgut / ANKARA</p>
                   </div>
                   <div className="rounded-[1.75rem] border border-slate-200/80 bg-white p-6 shadow-[0_20px_40px_rgba(27,43,94,0.06)]">
                     <p className="text-sm font-semibold text-primary">Telefon</p>

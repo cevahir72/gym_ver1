@@ -30,7 +30,7 @@ export default function Footer() {
           </h4>
           <p className="text-white/80 opacity-80 font-body-md mb-4 flex items-center gap-3">
             <span className="material-symbols-outlined text-sm">location_on</span>
-            Bağlıca, Etimesgut, Ankara
+            Yeni Bağlıca Mah. Etimesgut Blv. No:28/5 Etimesgut / ANKARA
           </p>
           <p className="text-white/80 opacity-80 font-body-md mb-4 flex items-center gap-3">
             <span className="material-symbols-outlined text-sm">phone</span>
