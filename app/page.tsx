@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 24 },
@@ -46,10 +47,10 @@ const heroButtonVariant = {
 };
 
 export default function Home() {
+  const router = useRouter();
   const [medalCount, setMedalCount] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [parentName, setParentName] = useState("");
   const [childAge, setChildAge] = useState("");
   const [phone, setPhone] = useState("");
@@ -67,23 +68,14 @@ export default function Home() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (isSubmitting) return;
-    setShowSuccess(false);
     setIsSubmitting(true);
 
-    const mailTo = "mailto:coolkidssportcenter@gmail.com";
-    const subject = encodeURIComponent("Ön Kayıt Talebi - Cool Kids Sport Center");
-    const body = encodeURIComponent(
-      `Ebeveyn Adı Soyadı: ${parentName || "-"}
-Çocuğun Yaşı: ${childAge || "-"}
-Telefon: ${phone || "-"}
-İlgilenilen Branşlar: ${
+    const message = encodeURIComponent(
+      `*Ön Kayıt Talebi - Cool Kids Sport Center*%0A%0AEbeveyn Adı Soyadı: ${parentName || "-"}%0AÇocuğun Yaşı: ${childAge || "-"}%0ATelefon: ${phone || "-"}%0Aİlgilenilen Branşlar: ${
         selectedBranches.length > 0 ? selectedBranches.join(", ") : "-"
-      }
-Ücretsiz Deneme Dersi İstiyorum: ${wantsTrial ? "Evet" : "Hayır"}`
+      }%0AÜcretsiz Deneme Dersi İstiyorum: ${wantsTrial ? "Evet" : "Hayır"}`
     );
-    const mailUrl = `${mailTo}?subject=${subject}&body=${body}`;
-
-    window.open(mailUrl, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/9005010076070?text=${message}`, "_blank", "noopener,noreferrer");
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -111,53 +103,8 @@ Telefon: ${phone || "-"}
     return () => cancelAnimationFrame(frame);
   }, [medalInView]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   return (
-    <div className="min-h-screen bg-background text-onBackground font-sans">
-      <motion.header
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45 }}
-        className={`sticky top-0 z-50 border-b border-slate-200/70 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/70 backdrop-blur-md shadow-lg'
-            : 'bg-white/95 backdrop-blur-sm'
-        }`}
-      >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div className="font-semibold text-xl text-primary">
-            COOL KIDS SPORT CENTER
-          </div>
-          <nav className="hidden gap-8 md:flex text-sm text-muted">
-            <a href="#venue" className="transition hover:text-primary">Mekanımız</a>
-            <a href="#about" className="transition hover:text-primary">Hakkımızda</a>
-            <a href="#sports" className="transition hover:text-primary">Sporlar</a>
-            <a href="#coaches" className="transition hover:text-primary">Eğitmenler</a>
-            <a href="#testimonials" className="transition hover:text-primary">Velilerimiz</a>
-            <a href="#contact" className="transition hover:text-primary">İletişim</a>
-          </nav>
-          <div className="hidden items-center gap-3 md:flex">
-            <a
-              href="#contact"
-              className="rounded-full border border-primary px-5 py-2 text-sm text-primary transition hover:bg-primary/5"
-            >
-              Ücretsiz Deneme
-            </a>
-            <button className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(242,101,34,0.18)] transition hover:bg-orange-600">
-              Başvur
-            </button>
-          </div>
-        </div>
-      </motion.header>
-
-      <main>
+    <main>
         <section className="relative overflow-hidden bg-primary text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(242,101,34,0.22),_transparent_40%),linear-gradient(180deg,#1B2B5E_0%,#0d1735_100%)]" />
           <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
@@ -218,7 +165,7 @@ Telefon: ${phone || "-"}
                 className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/10 pt-[60%] shadow-2xl shadow-black/20"
               >
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFJwfTiPkdX2xAX6GDKeS2hYm32Azv2CG_aco035DN-4sASaf7Kb1ZMNBPmHCfbpcyCVZqDccSR7ObNuvIAqf-Ncnx49yGPUqxa35wLsWBT4sob8XNdSCEAWJJmpo1jacX7JzPIcjzRnverNxmIipRQhTpK-R2BzcBDRkL3mb35a-c1JUJ-7PTSOxOMAHES1wF5g350b7YtL5OHk2BUtFBWxSWTW4PjAp8Nj5xcuhDxu9N4wsTT3-txj846w4N-_emjaUBRBar3kzY"
+                  src="/home-1.webp"
                   alt="Modern kids sports gym"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -244,27 +191,27 @@ Telefon: ${phone || "-"}
 
             <div className="grid gap-6 lg:grid-cols-3">
               <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEDzTd4U844scdUyF1ePSOK1zHiEXAYjYe46UEJ1DGroZ8OHz3xn05_e5E4a8bn_8sMAvNtG6jwGLvzlJG55ww_GIkmNgS9QX8zrxprzwRgE9CRn9nMT5_CMwhnHBiWlY7l2DMemCAiQOsfpZSFtzHJugSZn0Vr8Rusm3tSIrmtdWtywq6L9g1fKssCQb1qN-o-jvW6-xxxQ86g8X0Gb4Zx8ad_NtKkkr0rBNBLaRXm9_XxOUIzvyJRKRD-xHWuOrUG7Cn41sluJBx" alt="Gym floor" className="h-72 w-full object-cover" />
+                <img src="/cfitness-1.webp" alt="Veliler için Dinlenme Alanı" className="h-72 w-full object-cover" />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-primary">Geniş Antrenman Salonu</h3>
+                  <h3 className="text-xl font-semibold text-primary">Veliler için Dinlenme Alanı</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    Çayınızı huzurla yudumlarken çocuğunuzun nasıl geliştiğini 1. sıradan izleyin!
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.1 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
+                <img src="/baby-1.webp" alt="Cimnastik Salonu" className="h-72 w-full object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-primary">Cimnastik Salonu</h3>
                   <p className="mt-3 text-sm leading-7 text-muted">
                     Çocukların rahatça hareket edebildiği ferah salonlar ile güvenli bir spor ortamı.
                   </p>
                 </div>
               </motion.div>
 
-              <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.1 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZlm6k44rbUB2kLfi1epHBJdklSEEJxjiq4cIk99hrfwZ11ud1Uqi1CO4KdQOJG8kWzWBMubkMd0tIXT8YyrKaOkAP_nJ1RbWi_9qTWycCNLTcNn0Dg0TVt40M8Iz8vAN2Z6lS7aPgGUOEubJftCVpvr-8yo-kOVWk8tLqRDTJ_KoDPwt1WRyXYN7XU1jW0Ck9P6CfSVCyZ0TzWmYPXAJz8bAoWecAGgO6jZitrrRckZ9Yci5elKwZUtTw_Zk-flZLYrsTTtpqToUa" alt="Swimming pool" className="h-72 w-full object-cover" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-primary">Yüzme Havuzu</h3>
-                  <p className="mt-3 text-sm leading-7 text-muted">
-                    Hijyenik havuz alanı ile yüzme ve su sporları için özel bölüm.
-                  </p>
-                </div>
-              </motion.div>
-
               <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.2 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPttGiuq7VjWWn-z9541JSPJf8XVZk4NnsUw7beYkWfnTeo3wjLphsgorDE-hQev1QHcfhBYxHNCGgFJU973D5_KJkog6-HA5Zd0dJ6gWVg43PMu4ZtUBuoVRTHB8pvFhVIcuH73tcK0OpJqkqE1s14ZghhuOrHaU3n47sVtEYu80hNwyw8svP3j7oZzf9F8W1y2N_VZEWX3pYc4a_9RFAB4NvfwwqJlBD4MU77O31Q9thFZUAvaPUuqtK2j6idiXaIUDip7XhWanj" alt="Sports hall" className="h-72 w-full object-cover" />
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4_ygJoqvc5J-AGc73Bzh7ha51chARvjO9T0BXc1LkuTAH2BVKw0F-Qg2w0jngp0e3hD-Z3ye9JvS064F5uEy0ThKGOhdSlW6gf9tek19aAHsfxRX-kDwMCh6JarYr0_qLqjts2OzKNElzc6HLPdyDNJHz9y15FGnuq4d4Ra3n6Ha5IUDtS_SzxyneDbJ9LytDLVoM1vl7kgjwTYklPDRCcL2zhVKVhr6XnHYG6AFLOVJCUh8gzPEWnCelY-9bMc_6MbUH6-paMuL" />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-primary">Çok Amaçlı Salon</h3>
                   <p className="mt-3 text-sm leading-7 text-muted">
@@ -281,26 +228,28 @@ Telefon: ${phone || "-"}
             <div className="mb-12 text-center">
               <p className="text-sm uppercase tracking-[0.3em] text-accent">Sunulan Sporlar</p>
               <h2 className="mt-4 text-3xl font-semibold text-primary sm:text-4xl">
-                Her çocuğa uygun spor branşları.
+                Her çocuğa uygun spor branşları
               </h2>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
-                { title: "Cimnastik", label: "Esneklik ve denge", icon: "🤸" },
-                { title: "Çocuk Fitness", label: "Özel güç programı", icon: "🏋️" },
-                { title: "Taekwondo", label: "Disiplin ve odaklanma", icon: "🥋" },
-                { title: "Baby Gym", label: "0-3 yaş motor beceri", icon: "👶" },
-                { title: "Okçuluk", label: "Odaklanma ve sabır", icon: "🏹" },
-                { title: "Yetişkin Fitness", label: "Ebeveynler için özel seans", icon: "💪" },
+                { title: "Cimnastik", label: "Esneklik ve denge", icon: "🤸", slug: "cimnastik" },
+                { title: "Çocuk Fitness", label: "Özel güç programı", icon: "🏋️", slug: "cfitness" },
+                { title: "Taekwondo", label: "Disiplin ve odaklanma", icon: "🥋", slug: "taekwondo" },
+                { title: "Baby Gym", label: "0-3 yaş motor beceri", icon: "👶", slug: "babygym" },
+                { title: "Okçuluk", label: "Odaklanma ve sabır", icon: "🏹", slug: "okculuk" },
+                { title: "Yetişkin Fitness", label: "Ebeveynler için özel seans", icon: "💪", slug: "fitness" },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
                   variants={slideInLeft}
                   initial="hidden"
                   whileInView="visible"
+                  whileHover={{ y: -8, transition: { duration: 0.25 } }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="rounded-[1.5rem] border border-slate-200/80 bg-white p-8 shadow-[0_20px_40px_rgba(27,43,94,0.06)]"
+                  onClick={() => router.push(`/sporlar/${item.slug}`)}
+                  className="rounded-[1.5rem] border border-slate-200/80 bg-white p-8 shadow-[0_20px_40px_rgba(27,43,94,0.06)] cursor-pointer"
                 >
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-3xl bg-primary/10 text-2xl">
                     {item.icon}
@@ -357,38 +306,6 @@ Telefon: ${phone || "-"}
                   Bu sayıyı kullanıcı sayfa ilgili bölüme geldiğinde yavaşça 0'dan 47'ye yükselerek gösteriyoruz.
                 </p>
               </motion.div>
-            </div>
-          </div>
-        </section>
-
-        <section id="coaches" className="bg-background px-6 py-20 lg:px-8">
-          <div className="mx-auto max-w-7xl">
-            <div className="mb-12 text-center">
-              <p className="text-sm uppercase tracking-[0.3em] text-accent">Eğitmenlerimiz</p>
-              <h2 className="mt-4 text-3xl font-semibold text-primary sm:text-4xl">
-                Uzman ve çocuklarla uyumlu kadro.
-              </h2>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-              {[
-                { name: "Can Yıldız", role: "Basketbol Baş Antrenörü" },
-                { name: "Selin Aktaş", role: "Cimnastik Uzmanı" },
-                { name: "Murat Kaya", role: "Tenis Koordinatörü" },
-                { name: "Elif Demir", role: "Yüzme Antrenörü" },
-              ].map((coach, index) => (
-                <motion.div
-                  key={coach.name}
-                  variants={fadeInUp}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ duration: 0.45, delay: index * 0.08 }}
-                  className="rounded-[1.75rem] border border-slate-200/90 bg-white p-8 shadow-[0_20px_40px_rgba(27,43,94,0.06)]"
-                >
-                  <div className="mb-6 h-56 overflow-hidden rounded-[1.5rem] bg-slate-100" />
-                  <h3 className="text-xl font-semibold text-primary">{coach.name}</h3>
-                  <p className="mt-2 text-sm leading-7 text-muted">{coach.role}</p>
-                </motion.div>
-              ))}
             </div>
           </div>
         </section>
@@ -456,6 +373,8 @@ Telefon: ${phone || "-"}
           </div>
         </section>
 
+        {/* YouTube bölümü yoruma alındı */}
+        {/*
         <section id="promotional-video" className="bg-background px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="text-center mb-12">
@@ -487,6 +406,7 @@ Telefon: ${phone || "-"}
             </motion.div>
           </div>
         </section>
+        */}
 
         <section id="contact" className="bg-surface py-20 px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
@@ -512,13 +432,15 @@ Telefon: ${phone || "-"}
                   </div>
                   <div className="rounded-[1.75rem] border border-slate-200/80 bg-white p-6 shadow-[0_20px_40px_rgba(27,43,94,0.06)]">
                     <p className="text-sm font-semibold text-primary">Telefon</p>
-                    <p className="mt-3 text-sm text-muted">+90 (312) 000 00 00</p>
+                     <p className="mt-3 text-sm text-muted">0501 007 60 70</p>
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center gap-3 rounded-3xl bg-emerald-500 px-6 py-4 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(16,185,129,0.25)] transition hover:bg-emerald-600"
+                <a
+                  href="https://wa.me/9005010076070"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 rounded-3xl bg-emerald-500 px-6 py-4 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(16,185,129,0.25)] transition hover:bg-emerald-600 cursor-pointer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -530,7 +452,7 @@ Telefon: ${phone || "-"}
                     <path d="M16.5 12.75a1.5 1.5 0 01-2.12 0l-.38-.38a1.5 1.5 0 01-.03-2.12 1.5 1.5 0 012.12.03l.38.38a1.5 1.5 0 010 2.12z" />
                   </svg>
                   WhatsApp Destek
-                </button>
+                </a>
 
                 <div className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_20px_40px_rgba(27,43,94,0.08)]">
                   <iframe
@@ -606,7 +528,7 @@ Telefon: ${phone || "-"}
                             key={item}
                             type="button"
                             onClick={() => toggleBranch(item)}
-                            className={`rounded-full border px-4 py-2 text-sm transition ${
+                            className={`rounded-full border px-4 py-2 text-sm transition cursor-pointer ${
                               selectedBranches.includes(item)
                                 ? "border-primary bg-primary/10 text-primary"
                                 : "border-slate-200 bg-slate-50 text-slate-700 hover:border-primary hover:text-primary"
@@ -629,7 +551,7 @@ Telefon: ${phone || "-"}
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-primary px-6 py-4 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(27,43,94,0.18)] transition hover:bg-slate-900 disabled:cursor-not-allowed disabled:opacity-60"
+                      className="inline-flex w-full items-center justify-center gap-3 rounded-3xl bg-primary px-6 py-4 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(27,43,94,0.18)] transition hover:bg-slate-900 disabled:cursor-not-allowed disabled:opacity-60 cursor-pointer"
                     >
                       {isSubmitting ? (
                         <>
@@ -657,6 +579,5 @@ Telefon: ${phone || "-"}
           </div>
         </section>
       </main>
-    </div>
   );
 }
