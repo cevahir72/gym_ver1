@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const fadeInUp = {
@@ -264,6 +265,35 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
           </div>
         </section>
 
+        {/* Social Media Section */}
+        <section className="bg-surface py-20 px-6 lg:px-8 overflow-hidden">
+          <div className="mx-auto max-w-7xl">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.6 }}
+              className="mb-12 text-center"
+            >
+              <p className="text-sm uppercase tracking-[0.3em] text-accent">Sosyal Medyada Cool Kids</p>
+              <h2 className="mt-4 text-3xl font-semibold text-primary sm:text-4xl">
+                Bizi Instagram'da takip edin{" "}
+                <a
+                  href="https://www.instagram.com/coolkidssportscenter/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline"
+                >
+                  @coolkidssportscenter
+                </a>
+              </h2>
+            </motion.div>
+
+            <SocialCarousel />
+          </div>
+        </section>
+
         <section id="achievements" className="bg-surface py-20 px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -439,7 +469,7 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
                 </div>
 
                 <a
-                  href="https://wa.me/9005010076070"
+                  href="https://wa.me/9005010076070?text=Merhaba%2C%20spor%20salonunuz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%20Te%C5%9Fekk%C3%BCrler"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 rounded-3xl bg-emerald-500 px-6 py-4 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(16,185,129,0.25)] transition hover:bg-emerald-600 cursor-pointer"
@@ -581,5 +611,100 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
           </div>
         </section>
       </main>
+  );
+}
+
+const socialPosts = [
+  {
+    id: 1,
+    image: "/cimnastik-1.webp",
+    username: "coolkidssportscenter",
+    likes: 1247,
+    description: "Minik cimnastikçilerimiz bugün denge çalıştı! 🥇",
+  },
+  {
+    id: 2,
+    image: "/baby-6.webp",
+    username: "coolkidssportscenter",
+    likes: 983,
+    description: "Baby Gym derslerimizde eğlence tavan ☀️",
+  },
+  {
+    id: 3,
+    image: "/taek-2.webp",
+    username: "coolkidssportscenter",
+    likes: 1562,
+    description: "Taekwondo turnuvası öncesi son hazırlıklar 🥋",
+  },
+  {
+    id: 4,
+    image: "/ok-1.webp",
+    username: "coolkidssportscenter",
+    likes: 876,
+    description: "Okçulukta hedefe kilitlenen genç yetenekler 🏹",
+  },
+  {
+    id: 5,
+    image: "/cimnastik-2.webp",
+    username: "coolkidssportscenter",
+    likes: 1103,
+    description: "Yetenek ve disiplin bir arada 🤸",
+  },
+  {
+    id: 6,
+    image: "/baby-5.webp",
+    username: "coolkidssportscenter",
+    likes: 734,
+    description: "Çocuk Fitness ile enerjilerini atmaya devam 💪",
+  },
+  {
+    id: 7,
+    image: "/baby-2.webp",
+    username: "coolkidssportscenter",
+    likes: 921,
+    description: "Küçük kas gelişimi için eğlenceli aktiviteler 🧸",
+  },
+  {
+    id: 8,
+    image: "/taekwondo-2.webp",
+    username: "coolkidssportscenter",
+    likes: 1345,
+    description: "Turnuva heyecanı başlıyor! 🏆",
+  },
+];
+
+function SocialCarousel() {
+  return (
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {socialPosts.map((post, index) => (
+        <div
+          key={post.id}
+          onClick={() => window.open("https://www.instagram.com/coolkidssportscenter/", "_blank", "noopener,noreferrer")}
+          className="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-[0_8px_24px_rgba(27,43,94,0.06)] cursor-pointer hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-all duration-300"
+        >
+          <div className="aspect-[4/5] relative overflow-hidden bg-slate-100">
+            <Image
+              src={post.image}
+              alt={`${post.username} paylaşımı`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+              className="object-cover"
+              priority={index < 2}
+            />
+          </div>
+          <div className="p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary">CK</div>
+              <span className="text-sm font-semibold text-primary">{post.username}</span>
+            </div>
+            <div className="flex items-center gap-1 mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-red-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" /></svg>
+              <span className="text-sm font-semibold text-slate-700">{post.likes.toLocaleString("tr-TR")}</span>
+            </div>
+            <p className="text-sm text-slate-600 line-clamp-2">{post.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

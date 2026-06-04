@@ -18,10 +18,10 @@ export default function Footer() {
             Hızlı Menü
           </h4>
           <ul className="space-y-4">
-            <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="#">Privacy Policy</a></li>
-            <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="#">Terms of Service</a></li>
-            <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="#">FAQ</a></li>
-            <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="#">Careers</a></li>
+            <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="/privacy">Gizlilik Politikası</a></li>
+            <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="/terms">Kullanım Koşulları</a></li>
+            {/* <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="#">FAQ</a></li> */}
+            {/* <li><a className="text-white/80 opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-all font-body-md" href="#">Careers</a></li> */}
           </ul>
         </div>
         <div>

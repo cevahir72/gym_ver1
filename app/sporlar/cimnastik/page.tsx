@@ -32,7 +32,7 @@ export default function CimnastikPage() {
           <img
             alt="Gymnastics Hero"
             className="w-full h-full object-cover brightness-[0.4]"
-            src="https://lh3.googleusercontent.com/aida/ADBb0uhhA_bVfONkKC1l7agAasoH82DQ28_NHQYHGTD21F7vYV2ol2Xx0Xb7jMpW39CeQAwBKwEgTzFKCH4HfZQdju_K-4kT60vUM-ZXi3o9xA1AILY4nSEkhN1YRXqRc0dU-YirvIssfeAWIavvRYWDNLkjiwKB1HQkah4dRacNyzhEoNrhGd0bCR1FfLDuh8XIxcUwUDfkvra0NPgYoFOP_9y3RP1QsM8V9XeKg3KX2V95WSzkJacnJ8NAOd1Y"
+            src="/cim-banner.svg"
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 md:px-16 reveal">

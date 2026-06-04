@@ -30,11 +30,11 @@ export default function Navbar() {
         <Link href="/" className="font-semibold text-xl text-primary">
           COOL KIDS SPORT CENTER
         </Link>
-        <nav className="hidden gap-8 md:flex text-sm text-muted">
-          <a href="/#venue" className="transition hover:text-primary">Mekanımız</a>
-          <Link href="/hakkimizda" className="transition hover:text-primary">Hakkımızda</Link>
-          <Link href="/sporlar" className="transition hover:text-primary">Sporlar</Link>
-          <a href="/#contact" className="transition hover:text-primary">İletişim</a>
+        <nav className="hidden gap-8 md:flex text-sm font-semibold text-primary">
+          <a href="/#venue" className="transition hover:text-accent">Mekanımız</a>
+          <Link href="/hakkimizda" className="transition hover:text-accent">Hakkımızda</Link>
+          <Link href="/sporlar" className="transition hover:text-accent">Sporlar</Link>
+          <a href="/#contact" className="transition hover:text-accent">İletişim</a>
         </nav>
         <div className="hidden items-center gap-3 md:flex">
           <a

@@ -177,7 +177,7 @@ export default function FitnessPage() {
             >
               <img
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiqHOj2IBdISejsfwjubXhNM8ZnPrQaO7K8M4omdSqfTZS07HXt3AvD4AuDYkWNJpjWdNh0QxNY19syJDAwmY4TJm2mh_ep_RKhqdnoPNaJesiebWOgMbhNzRH0sPpdv2kbNlhfYFh1nWCxzJmnV_ETniM21UhEUryDhqj8jhH96Q1V9W5zBMRSaocglxyzDvyHlSGYRhSvb5lIfT81ijHaxRlQuro5GJ8MO-T3QCGjyGN3em_UsIhKCnVfE-VoFQAVS3zc3jzod34"
+                src="/fit-1.webp"
               />
             </motion.div>
             <motion.div
@@ -190,7 +190,7 @@ export default function FitnessPage() {
             >
               <img
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI7EljlKwkAACtd-yScIJ0XNKNBEW9diB1ev1rIhm5ZteupHH3Uz5nRj2XunEj9YWXsjzYb1g9megcjxKhuEYblmmy6I75MhyhxUossMmgaBTZOYRDGwghaATfYWGQufU-mSNIWpffiC5JYCyES6zq0iwCfR550LDu3wCBgBSGz5dRB7MBK7Cs6ZvzOFJK-k8AuwDBS1VZoB8LUNXJFKCRuVceFxb4SQAr3NgCTHFbqXwwIFETsGqQXtYjEQyAy8UfNmVgqWb6EOgF"
+                src="/fit-2.webp"
               />
             </motion.div>
             <motion.div
@@ -203,7 +203,7 @@ export default function FitnessPage() {
             >
               <img
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeH8lpXgIR3pt_UB-lbA7FRvwUhSbqqZjPgmajqdT639jOBGXEXK1KOc653SmvsQq72CaIi1t2tEySh59DHts4173gCfORNvC_HKWjy3dpVKRQxuXXYxYoeX4xsdx_ovu0q51_sBqSXoOWulTq9YyIcpLGhKP6KYM4L5MQ7xNX0_D5jYBBRsTP8GxOPK4wvNRjPDRsbQCiGkglbaNVvx38wL8gDvX8A1usSAXiE1NklUXdhdox_Wlpj-7zFVagApMdiLlN_kXEBZ5O"
+                src="/fit-3.webp"
               />
             </motion.div>
             <motion.div
@@ -216,7 +216,7 @@ export default function FitnessPage() {
             >
               <img
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcyl-GrYQgHZy78mhW9HncKZC4eaJFxN0Hd6XSI9kA59txnks4laYV481JZ3ykYQCTrpyeqbc1BNZoH228l5iH_9dDO-ULfsLtP_gT9mQelTfxYm7E8hzc1oU3mDPAKP0wbtukLsw1mjqONzzhNFAB4oXxQI8K7x0x_WVE3QFAYz2afDgx5LVpoJ8RNgNzYiMcxl8lWaiHEUnPT74vdongATtMcy7Zv3mslNGWp8JiYWYVthSS3q-OAHOP1O68CwIin05n7_ICO60b"
+                src="/fit-4.webp"
               />
             </motion.div>
           </div>
@@ -330,7 +330,7 @@ export default function FitnessPage() {
         <div className="absolute right-0 top-0 h-full w-1/3 opacity-20 hidden lg:block">
           <img
             className="w-full h-full object-cover grayscale"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWwXEdug-zZfecqaSmWPWwOCGLa_lwDXAtO25tS4EOgvuetPs_JKTBlVtfpDrHV6wNj0n0gRhk2w9jcq83gN6P4TC4wle83sdxjGTG2s32pIMUSzvtR-iASV8IO_-jGMjqtwt3xcKPDg4GNF84D1e8sdM2Ukm3Y_ncwDXUgaePUnjx8Uq38sdluwpXYbaUWEsDBu6YZu2hR-0OHUhIyhyEnlE14Mr5W8s02Ylm9QfTbnmiet3W-PeshdGjLisUhrbgytUg-htIt0F1"
+            src="/antrenor.webp"
           />
         </div>
         <motion.div
@@ -353,12 +353,12 @@ export default function FitnessPage() {
               <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary-fixed">
                 <img
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUnNn8bJBMTF0F2u31_pe0FcLXJq28xfBQg1dafEUMl1099QbyAy1LcXb6svaoIh_VWvBBjQhFLxdJ04E6A5hvTMDlk1bNJwSTHtevBBpsBup3eNc2Tg5QUjFDpYNASll-pBfNoIy5qQFONRIse4WJt2OFAdI0AwqPt7sh10rdpojPOPBFZQ-IZSIuGyWQ6GySdSVPayg0lsV1rzZ41FFr1Q5JuPUU3S8Not-DOgDvcJmMlaj4DaNCIM1Ybab1G9so1AroS0nNwtL"
+                  src="/antrenor.webp"
                 />
               </div>
               <div>
                 <p className="font-headline-md text-headline-md text-secondary-fixed">
-                  Sinan Demir
+                  Gültekin GÜLEÇ
                 </p>
                 <p className="font-label-md text-label-md uppercase opacity-80">
                   Master Antrenör &amp; Fitness Direktörü

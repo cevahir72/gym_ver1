@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -49,12 +50,12 @@ export default function HakkimizdaPage() {
               eğitimi sunuyoruz.
             </p>
             <div className="flex gap-4">
-              <button className="bg-secondary-container hover:bg-secondary text-white px-8 py-4 rounded font-headline-md transition-all active:scale-95 cursor-pointer">
+              <a href="/#contact" className="bg-secondary-container hover:bg-secondary text-white px-8 py-4 rounded font-headline-md transition-all active:scale-95 cursor-pointer inline-block">
                 BAŞLA
-              </button>
-              <button className="border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded font-headline-md transition-all active:scale-95 cursor-pointer">
+              </a>
+              <Link href="/sporlar" className="border-2 border-white hover:bg-white/10 text-white px-8 py-4 rounded font-headline-md transition-all active:scale-95 cursor-pointer inline-block">
                 KEŞFET
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -74,7 +75,7 @@ export default function HakkimizdaPage() {
             </h2>
             <div className="space-y-6 text-on-surface-variant">
               <p className="font-body-md text-body-md">
-                KIDS KIDS Sport Center olarak, sporun sadece fiziksel bir
+                COOL KIDS SPORT CENTER olarak, sporun sadece fiziksel bir
                 aktivite değil, bir yaşam disiplini olduğuna inanıyoruz.
                 Misyonumuz, her çocuğun içindeki yeteneği güvenli ve eğlenceli
                 bir ortamda profesyonel rehberlikle ortaya çıkarmaktır.
@@ -198,7 +199,7 @@ export default function HakkimizdaPage() {
             <img
               alt="Modern Indoor Gym"
               className="rounded-xl shadow-2xl border-4 border-white"
-              src="https://lh3.googleusercontent.com/aida/ADBb0ugbq8VWA7CazfDo5S13nmVAuuTV77yMGVb7ZoznQSymabviOOUE9ZU6drcJNji80Z-XaEEm5nhkKrEUY6Pr6DsAr-dvQJcfuR3vlHkqt_e6hwu-XJa4zqXX0eOtjQZyRWz3aTzQJ4DKDd5Y5PAuJvkyFpfl0ZBLoI5D-d5jRhcZ5STcuKg3V8p1MgJDWruM-E-RKgxwIERInAa2-4vRCep7WlVGvOvYMqGjo997NXAELhyJeju0ov994AE"
+              src="/cimnastik-1.webp"
             />
           </motion.div>
           <motion.div
@@ -280,69 +281,36 @@ export default function HakkimizdaPage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center"
+            className="grid grid-cols-1 gap-8 justify-items-center"
           >
             {/* Coach 1 */}
             <motion.div
               variants={fadeInUp}
-              className="flex flex-col md:flex-row gap-6 bg-surface-container-lowest p-4 border border-outline-variant rounded-xl max-w-md"
+              className="flex flex-col md:flex-row gap-6 bg-surface-container-lowest p-4 border border-outline-variant rounded-xl w-full"
             >
               <div className="w-full md:w-48 h-64 overflow-hidden rounded-lg">
                 <img
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjbMrgFnISLecMSn3kLDN1wKntyvnUBrDyHYvLACWiBbL3qZ_zxo-83uD4vLy4HNtp8akXqI8sNluG_u8uooEe-5IFwHEbhF8CPRSI-fq_Xuu3EHr2WOjj09sU0PAPI0OZqWGzLNzi5aeaiXWdROi3IxI02Q5xyNRTOZh9k6SHfzibQKNFreqMNmo8PnCUvrffPDKvnnkgB6GTgPZTUHR1GWQrJfyYHBJAPUPPahQwBdCcXWzgmT6QdTmk5_9dHOyoseMArFH36pZx"
+                  src="/antrenor.webp"
                 />
               </div>
               <div className="flex-1 p-3">
                 <span className="text-secondary font-label-md uppercase tracking-wider">
-                  Baş Antrenör
+                  Milli Takım Antrenörü
                 </span>
                 <h3 className="font-headline-md text-headline-md text-primary mb-3">
-                  Caner Demir
+                  Gültekin GÜLEÇ
                 </h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-                  Basketbol ve Motorik Gelişim Uzmanı. 15 yıllık profesyonel
+                  Cimnastik ve Motorik Gelişim Uzmanı. 15 yıllık profesyonel
                   sporculuk ve eğitmenlik kariyeri.
                 </p>
                 <div className="flex gap-3">
                   <span className="bg-surface-container px-3 py-1 rounded text-caption font-bold">
-                    BASKETBOL
+                    CİMNASTİK
                   </span>
                   <span className="bg-surface-container px-3 py-1 rounded text-caption font-bold">
                     KOORDİNASYON
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Coach 2 */}
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-col md:flex-row gap-6 bg-surface-container-lowest p-4 border border-outline-variant rounded-xl max-w-md"
-            >
-              <div className="w-full md:w-48 h-64 overflow-hidden rounded-lg">
-                <img
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbAPBznsQGy309UpRkS0r5JXb_EmC-pPTXrdQZtMR37PA4k0_uT0tYO-kx8n9ZpUXiZaQJIEK-SAn8BaGdMng-ujK9kZbYgGK2V8Ysfq4KJrmpCfVttKDwtHN1xt8lvzKyCiosFkhCiqHywKZP-CEUoj0ajdbg0Raize8pXHCYRawzrAoFRLpyE2lZObSQ63h0577_s0P_L0y1Na4DTj19U-1teUtItJU48CpkUuefTz3NMHErxw4cLB9L6We9vPeS3ejchqEOeNpz"
-                />
-              </div>
-              <div className="flex-1 p-3">
-                <span className="text-secondary font-label-md uppercase tracking-wider">
-                  Voleybol Antrenörü
-                </span>
-                <h3 className="font-headline-md text-headline-md text-primary mb-3">
-                  Sinan Demir
-                </h3>
-                <p className="font-body-md text-body-md text-on-surface-variant mb-6">
-                  Takım sporları ve çocuk psikolojisi üzerine uzmanlaşmış
-                  tecrübeli teknik direktör.
-                </p>
-                <div className="flex gap-3">
-                  <span className="bg-surface-container px-3 py-1 rounded text-caption font-bold">
-                    VOLEYBOL
-                  </span>
-                  <span className="bg-surface-container px-3 py-1 rounded text-caption font-bold">
-                    TAKIM RUHU
                   </span>
                 </div>
               </div>
