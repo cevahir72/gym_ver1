@@ -73,7 +73,7 @@ export default function TaekwondoPage() {
               <p>
                 Taekwondo sadece bir dövüş sanatı değil, çocukların zihinsel ve
                 bedensel gelişimini destekleyen kapsamlı bir hayat felsefesidir.
-                Elite Junior Sports bünyesinde, her öğrencimizin bireysel
+                Cool Kids Sports Center bünyesinde, her öğrencimizin bireysel
                 sınırlarını tanımasını ve bunları aşma cesaretini kazanmasını
                 sağlıyoruz.
               </p>
@@ -136,8 +136,8 @@ export default function TaekwondoPage() {
           >
             {[
               {
-                title: "Minik Kaplanlar",
-                age: "4-6 Yaş Grubu",
+                title: "Başlangıç Grubu",
+                age: "6-8 Yaş Grubu",
                 features: [
                   "Motor Gelişimi ve Koordinasyon",
                   "Temel Esneklik ve Denge",
@@ -146,24 +146,18 @@ export default function TaekwondoPage() {
                 variant: "light",
               },
               {
-                title: "Gelişim Grubu",
-                age: "7-12 Yaş Grubu",
+                title: "Eğitim Grubu",
+                age: "7-15 Yaş Grubu",
                 features: [
                   "İleri Teknik Vuruşlar",
                   "Poomsae (Form) Çalışmaları",
                   "Özsavunma ve Karakter Gelişimi",
-                ],
-                variant: "accent",
-              },
-              {
-                title: "Performans Takımı",
-                age: "Lisanslı Sporcular",
-                features: [
                   "Müsabaka Stratejileri",
                   "Milli Takım Hazırlık Süreçleri",
                   "İleri Kondisyon ve Patlayıcı Güç",
+                  "Lisanslı Sporcular",
                 ],
-                variant: "dark",
+                variant: "accent",
               },
             ].map((level) => (
               <motion.div
@@ -359,14 +353,6 @@ export default function TaekwondoPage() {
               kararlı bakışlarıyla bir lidere dönüşmesini izlemek paha
               biçilemez. Biz burada sadece kuşak değil, gelecek veriyoruz.&rdquo;
             </p>
-            <cite className="not-italic block">
-              <span className="font-label-md text-secondary block uppercase">
-                Master Ahmet Yılmaz
-              </span>
-              <span className="font-caption text-on-surface-variant">
-                Baş Antrenör, 5. Dan Siyah Kuşak
-              </span>
-            </cite>
           </blockquote>
         </motion.div>
       </section>

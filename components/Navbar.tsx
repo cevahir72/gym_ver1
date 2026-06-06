@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +28,8 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="font-semibold text-xl text-primary">
+        <Link href="/" className="flex items-center gap-3 font-semibold text-xl text-primary">
+          <Image src="/logo-1.png" alt="Cool Kids Logo" width={40} height={40} />
           COOL KIDS SPORT CENTER
         </Link>
         <nav className="hidden gap-8 md:flex text-sm font-semibold text-primary">

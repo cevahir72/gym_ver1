@@ -67,10 +67,10 @@ export default function CimnastikPage() {
               </h2>
               <div className="w-20 h-1.5 bg-secondary-container mb-8"></div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Cimnastik, tüm spor branşlarının temeli olarak kabul edilir. Elite Junior Sports Center bünyesinde sunduğumuz cimnastik programı, çocuğunuzun motor becerilerini geliştirmesine yardımcı olurken disiplin ve kararlılık duygularını pekiştirir.
+                Cimnastik, tüm spor branşlarının temeli olarak kabul edilir. Cool Kids Sports Center bünyesinde sunduğumuz cimnastik programı, çocuğunuzun motor becerilerini geliştirmesine yardımcı olurken disiplin ve kararlılık duygularını pekiştirir.
               </p>
               <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
-                Müfredatımız, 0-3 yaş "Baby Gym" seanslarından başlayarak, performans gruplarına kadar uzanan geniş bir yelpazeyi kapsar. Her yaş grubuna özel olarak tasarlanmış çalışma programları ve pedagojik yaklaşımımızla fark yaratıyoruz.
+                Müfredatımız, 1.5-4 yaş "Baby Gym" seanslarından başlayarak, performans gruplarına kadar uzanan geniş bir yelpazeyi kapsar. Her yaş grubuna özel olarak tasarlanmış çalışma programları ve pedagojik yaklaşımımızla fark yaratıyoruz.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-4 bg-surface-container border-l-4 border-primary">
@@ -132,7 +132,7 @@ export default function CimnastikPage() {
                 Baby Gym
               </div>
               <div className="text-on-surface-variant font-label-md text-label-md mb-6 uppercase">
-                0 - 3 YAŞ
+                1.5 - 4 YAŞ
               </div>
               <ul className="space-y-4 mb-8 text-on-surface-variant font-body-md">
                 <li className="flex items-start gap-3">
@@ -154,9 +154,9 @@ export default function CimnastikPage() {
                   <span>Sosyalleşme ve duyusal aktivite</span>
                 </li>
               </ul>
-              <button className="w-full py-3 border border-primary text-primary font-bold uppercase hover:bg-primary hover:text-white transition-colors cursor-pointer">
+              <a href="/#contact" className="block w-full py-3 border border-primary text-primary font-bold uppercase hover:bg-primary hover:text-white transition-colors text-center">
                 Bilgi Al
-              </button>
+              </a>
             </div>
 
             {/* Card 2 */}
@@ -165,7 +165,7 @@ export default function CimnastikPage() {
                 Temel Cimnastik
               </div>
               <div className="text-on-surface-variant font-label-md text-label-md mb-6 uppercase">
-                4 - 7 YAŞ
+                4 - 6 YAŞ
               </div>
               <ul className="space-y-4 mb-8 text-on-surface-variant font-body-md">
                 <li className="flex items-start gap-3">
@@ -187,9 +187,9 @@ export default function CimnastikPage() {
                   <span>Haftalık düzenli takip çizelgesi</span>
                 </li>
               </ul>
-              <button className="w-full py-3 border border-primary text-primary font-bold uppercase hover:bg-primary hover:text-white transition-colors cursor-pointer">
+              <a href="/#contact" className="block w-full py-3 border border-primary text-primary font-bold uppercase hover:bg-primary hover:text-white transition-colors text-center">
                 Bilgi Al
-              </button>
+              </a>
             </div>
 
             {/* Card 3 */}
@@ -198,7 +198,7 @@ export default function CimnastikPage() {
                 Performans Grubu
               </div>
               <div className="text-on-surface-variant font-label-md text-label-md mb-6 uppercase">
-                8+ YAŞ
+                6 - 15 YAŞ
               </div>
               <ul className="space-y-4 mb-8 text-on-surface-variant font-body-md">
                 <li className="flex items-start gap-3">
@@ -219,10 +219,22 @@ export default function CimnastikPage() {
                   </span>
                   <span>Bölgesel ve ulusal müsabaka hazırlığı</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-secondary-container text-sm mt-1">
+                    check_circle
+                  </span>
+                  <span>Bölgesel, Ulusal, Uluslararası müsabakaları için hazırlık</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-secondary-container text-sm mt-1">
+                    check_circle
+                  </span>
+                  <span>Cimnastik Lisansı</span>
+                </li>
               </ul>
-              <button className="w-full py-3 border border-primary text-primary font-bold uppercase hover:bg-primary hover:text-white transition-colors cursor-pointer">
+              <a href="/#contact" className="block w-full py-3 border border-primary text-primary font-bold uppercase hover:bg-primary hover:text-white transition-colors text-center">
                 Bilgi Al
-              </button>
+              </a>
             </div>
           </div>
         </div>

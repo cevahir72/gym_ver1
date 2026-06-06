@@ -164,7 +164,7 @@ export default function CfitnessPage() {
                 sports_soccer
               </span>
               <h3 className="font-headline-md text-headline-md text-primary mb-4">
-                7-12 Yaş Grubu (Gelişim)
+                6-15 Yaş Grubu (Gelişim)
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6">
                 Teknik becerilerin geliştirilmesi, dayanıklılık ve takım ruhu
@@ -192,7 +192,7 @@ export default function CfitnessPage() {
               </ul>
             </motion.div>
 
-            {/* Group 3 */}
+            {/* Group 3 - COMMENTED OUT
             <motion.div
               variants={fadeInUp}
               className="bg-surface-container-lowest p-8 border border-outline-variant hover:shadow-xl transition-shadow group relative"
@@ -229,6 +229,7 @@ export default function CfitnessPage() {
                 </li>
               </ul>
             </motion.div>
+            END COMMENTED OUT */}
           </motion.div>
         </div>
       </section>

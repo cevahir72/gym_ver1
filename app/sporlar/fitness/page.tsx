@@ -77,73 +77,53 @@ export default function FitnessPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={fadeInUp}
+          className="bg-surface-container-lowest border border-t-4 border-t-secondary-container border-outline-variant p-8 md:p-12 hover:shadow-xl transition-shadow"
         >
-          {[
-            {
-              icon: "fitness_center",
-              title: "Birebir Özel Ders (PT)",
-              desc: "Size özel hedefler doğrultusunda hazırlanan antrenman programı ile maksimum verim ve profesyonel takip.",
-              features: ["Postür Analizi", "Kişisel Takip Sistemi", "Esnek Saat Aralığı"],
-              link: "Detaylı Bilgi",
-              accent: false,
-            },
-            {
-              icon: "groups",
-              title: "Grup Dersleri",
-              desc: "Yüksek enerjili topluluk dersleri ile motivasyonunuzu zirvede tutun. Pilates, CrossFit ve HIIT seansları.",
-              features: ["Dinamik Atmosfer", "Uzman Eğitmenler", "Seviye Grupları"],
-              link: "Ders Programı",
-              accent: true,
-            },
-            {
-              icon: "restaurant",
-              title: "Beslenme Danışmanlığı",
-              desc: "Antrenmanlarınızı doğru beslenme ile destekleyin. Uzman diyetisyenlerimizle sürdürülebilir yaşam tarzı.",
-              features: ["Vücut Analizi (InBody)", "Kişisel Menü Planlama", "Performans Takibi"],
-              link: "Hemen Başla",
-              accent: false,
-            },
-          ].map((item) => (
-            <motion.div
-              key={item.title}
-              variants={fadeInUp}
-              className={
-                "bg-surface-container-lowest border border-outline-variant p-8 hover:shadow-xl transition-shadow group" +
-                (item.accent ? " border-t-4 border-t-secondary-container" : "")
-              }
-            >
-              <div className="w-14 h-14 bg-primary text-white flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors">
-                <span className="material-symbols-outlined text-3xl">
-                  {item.icon}
-                </span>
-              </div>
-              <h3 className="font-headline-md text-headline-md text-primary mb-4">
-                {item.title}
-              </h3>
-              <p className="text-on-surface-variant font-body-md mb-6">
-                {item.desc}
-              </p>
-              <ul className="space-y-3 mb-8 text-on-surface-variant font-body-md">
-                {item.features.map((f, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-secondary text-sm">
-                      check_circle
-                    </span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <a
-                className="text-primary font-bold uppercase text-label-md flex items-center gap-2 group-hover:gap-4 transition-all cursor-pointer"
-                href="#"
-              >
-                {item.link}
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </a>
-            </motion.div>
-          ))}
+          <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
+            <div className="w-16 h-16 bg-primary text-white flex items-center justify-center">
+              <span className="material-symbols-outlined text-4xl">
+                fitness_center
+              </span>
+            </div>
+            <div className="w-16 h-16 bg-primary text-white flex items-center justify-center">
+              <span className="material-symbols-outlined text-4xl">
+                restaurant
+              </span>
+            </div>
+          </div>
+          <h3 className="font-headline-lg text-headline-lg text-primary mb-6">
+            Kişiye Özel Koçluk ve Beslenme Programları
+          </h3>
+          <p className="text-on-surface-variant font-body-lg mb-8 leading-relaxed">
+            Size özel hedefler doğrultusunda hazırlanan antrenman programı ile maksimum verim ve profesyonel takip. Antrenmanlarınızı doğru beslenme ile destekleyin. Uzman diyetisyenlerimizle sürdürülebilir yaşam tarzı.
+          </p>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <li className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-secondary text-lg mt-0.5">
+                check_circle
+              </span>
+              <span className="text-on-surface-variant font-body-md">Beslenme Takibi - Postur ve Vücut Analizi</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-secondary text-lg mt-0.5">
+                check_circle
+              </span>
+              <span className="text-on-surface-variant font-body-md">Kilo Alma ve Kilo Verme</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-secondary text-lg mt-0.5">
+                check_circle
+              </span>
+              <span className="text-on-surface-variant font-body-md">Vücut Geliştirmeler ve Fitness Bay & Bayan Yarışmacı Hazırlığı ve Danışmanlığı</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-secondary text-lg mt-0.5">
+                check_circle
+              </span>
+              <span className="text-on-surface-variant font-body-md">Sporcu Güçlendirme ve Performans Artırma Programları</span>
+            </li>
+          </ul>
         </motion.div>
       </section>
 

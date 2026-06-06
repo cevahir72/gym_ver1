@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -59,6 +59,13 @@ export default function Home() {
   const [wantsTrial, setWantsTrial] = useState(false);
   const medalRef = useRef<HTMLDivElement | null>(null);
   const medalInView = useInView(medalRef, { once: true, amount: 0.4 });
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const logoOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.12, 0.04, 0]);
+  const logoY = useTransform(scrollYProgress, [0, 1], [0, -60]);
 
   const toggleBranch = (branch: string) => {
     setSelectedBranches((prev) =>
@@ -108,8 +115,14 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
 
   return (
     <main>
-        <section className="relative overflow-hidden bg-primary text-white">
+        <section ref={heroRef} className="relative overflow-hidden bg-primary text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(242,101,34,0.22),_transparent_40%),linear-gradient(180deg,#1B2B5E_0%,#0d1735_100%)]" />
+          <motion.div
+            style={{ opacity: logoOpacity, y: logoY }}
+            className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-full lg:w-1/2 pointer-events-none hidden lg:block"
+          >
+            <img className="w-full h-full object-contain" src="/logo-1.webp" alt="" />
+          </motion.div>
           <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
             <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <motion.div
@@ -194,7 +207,7 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
 
             <div className="grid gap-6 lg:grid-cols-3">
               <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
-                <img src="/cfitness-1.webp" alt="Veliler için Dinlenme Alanı" className="h-72 w-full object-cover" />
+                <img src="/veli-1.webp" alt="Veliler için Dinlenme Alanı" className="h-72 w-full object-cover" />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-primary">Veliler için Dinlenme Alanı</h3>
                   <p className="mt-3 text-sm leading-7 text-muted">
@@ -204,9 +217,9 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
               </motion.div>
 
               <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.1 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
-                <img src="/baby-1.webp" alt="Cimnastik Salonu" className="h-72 w-full object-cover" />
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4_ygJoqvc5J-AGc73Bzh7ha51chARvjO9T0BXc1LkuTAH2BVKw0F-Qg2w0jngp0e3hD-Z3ye9JvS064F5uEy0ThKGOhdSlW6gf9tek19aAHsfxRX-kDwMCh6JarYr0_qLqjts2OzKNElzc6HLPdyDNJHz9y15FGnuq4d4Ra3n6Ha5IUDtS_SzxyneDbJ9LytDLVoM1vl7kgjwTYklPDRCcL2zhVKVhr6XnHYG6AFLOVJCUh8gzPEWnCelY-9bMc_6MbUH6-paMuL" alt="Çok Amaçlı Salon - 1" className="h-72 w-full object-cover" />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-primary">Cimnastik Salonu</h3>
+                  <h3 className="text-xl font-semibold text-primary">Çok Amaçlı Salon - 1</h3>
                   <p className="mt-3 text-sm leading-7 text-muted">
                     Çocukların rahatça hareket edebildiği ferah salonlar ile güvenli bir spor ortamı.
                   </p>
@@ -214,11 +227,31 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
               </motion.div>
 
               <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.2 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4_ygJoqvc5J-AGc73Bzh7ha51chARvjO9T0BXc1LkuTAH2BVKw0F-Qg2w0jngp0e3hD-Z3ye9JvS064F5uEy0ThKGOhdSlW6gf9tek19aAHsfxRX-kDwMCh6JarYr0_qLqjts2OzKNElzc6HLPdyDNJHz9y15FGnuq4d4Ra3n6Ha5IUDtS_SzxyneDbJ9LytDLVoM1vl7kgjwTYklPDRCcL2zhVKVhr6XnHYG6AFLOVJCUh8gzPEWnCelY-9bMc_6MbUH6-paMuL" />
+                <img src="/salon-2.webp" alt="Çok Amaçlı Salon - 2" className="h-72 w-full object-cover" />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-primary">Çok Amaçlı Salon</h3>
+                  <h3 className="text-xl font-semibold text-primary">Çok Amaçlı Salon - 2</h3>
                   <p className="mt-3 text-sm leading-7 text-muted">
                     Turnuva ve derslere uygun, modern altyapılı geniş salon.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.3 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
+                <img src="/cocuk-1.webp" alt="Çocuk Etkinlik Salonu" className="h-72 w-full object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-primary">Çocuk Etkinlik Salonu</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    Çocukların yaratıcılığını ve sosyal becerilerini geliştirdikleri eğlenceli ve güvenli bir alan.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div variants={slideInLeft} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: 0.4 }} className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_20px_60px_rgba(27,43,94,0.08)]">
+                <img src="/fitness_saloon.webp" alt="Fittness Salonumuz" className="h-72 w-full object-cover" />
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-primary">Fittness Salonumuz</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted">
+                    Modern ekipmanlarla donatılmış, profesyonel antrenörlerin yönettiği fitness alanı.
                   </p>
                 </div>
               </motion.div>

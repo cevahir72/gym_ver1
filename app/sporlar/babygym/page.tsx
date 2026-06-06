@@ -73,7 +73,7 @@ export default function BabyGymPage() {
               </h2>
               <div className="h-1 w-20 bg-secondary-container mb-6"></div>
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                0-3 yaş arası dönem, bir çocuğun fiziksel ve bilişsel
+                1.5-4 yaş arası dönem, bir çocuğun fiziksel ve bilişsel
                 gelişiminin en kritik evresidir. Baby Gym programımız, bu
                 değerli yıllarda miniklerin koordinasyon, denge ve motor
                 becerilerini maksimum seviyeye çıkarmak için tasarlandı.

@@ -138,7 +138,7 @@ export default function OkculukPage() {
             {[
               {
                 title: "Genç Okçular",
-                age: "8-12 Yaş Grubu",
+                age: "6-8 Yaş",
                 features: [
                   "Motor Beceriler ve Koordinasyon",
                   "Temel Duruş Teknikleri",
@@ -147,24 +147,18 @@ export default function OkculukPage() {
                 variant: "light",
               },
               {
-                title: "Gelişim Grubu",
-                age: "12-16 Yaş Grubu",
+                title: "Gelişim & Performans Grubu",
+                age: "7+ Yaş Grubu",
                 features: [
                   "Teknik Analiz ve Düzeltme",
                   "Turnuva Hazırlık Süreçleri",
                   "Ekipman Bakımı ve Ayarı",
-                ],
-                variant: "accent",
-              },
-              {
-                title: "Performans Takımı",
-                age: "Lisanslı Sporcular",
-                features: [
                   "Üst Düzey Müsabaka Stratejisi",
                   "Milli Takım Odaklı Antrenmanlar",
                   "Profesyonel Kondisyon Programı",
+                  "Lisanslı Sporcular",
                 ],
-                variant: "dark",
+                variant: "accent",
               },
             ].map((level) => (
               <motion.div
@@ -365,14 +359,6 @@ export default function OkculukPage() {
               sadece hedefi vurmayı değil, hayata karşı dik durmayı
               öğretiyoruz.&rdquo;
             </p>
-            <cite className="not-italic block">
-              <span className="font-label-md text-secondary block uppercase tracking-widest">
-                Master Kenan Yıldız
-              </span>
-              <span className="font-caption text-on-surface-variant">
-                Baş Okçuluk Antrenörü
-              </span>
-            </cite>
           </blockquote>
         </motion.div>
       </section>
