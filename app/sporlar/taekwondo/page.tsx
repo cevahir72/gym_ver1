@@ -35,7 +35,7 @@ export default function TaekwondoPage() {
             className="max-w-2xl"
           >
             <span className="inline-block bg-secondary text-white px-4 py-1 font-label-md text-label-md uppercase mb-6 tracking-widest">
-              COOL KIDS SPORT CENTER
+              COOL KIDS SPORTS CENTER
             </span>
             <h1 className="font-display-lg text-display-lg mb-6 leading-tight">
               Taekwondo: Disiplin ve Saygı Temelli Eğitim

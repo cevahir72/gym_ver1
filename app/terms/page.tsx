@@ -40,7 +40,7 @@ export default function TermsPage() {
             className="space-y-8 text-on-surface-variant"
           >
             <p className="font-body-md text-body-md">
-              coolkidssportcenter.com web sitesine ("Site") hoş geldiniz. Bu Site, Cool Kids Sport Center ("Salonumuz", "Biz" veya "İşletme") tarafından işletilmektedir.
+              coolkidssportcenter.com web sitesine ("Site") hoş geldiniz. Bu Site, Cool Kids Sports Center ("Salonumuz", "Biz" veya "İşletme") tarafından işletilmektedir.
             </p>
             <p className="font-body-md text-body-md">
               Sitemizi ziyaret ederek, form doldurarak, deneme dersi veya üyelik başvurusu yaparak, aşağıda belirtilen kullanım şartlarını ("Şartlar") kabul etmiş sayılarsınız. Eğer bu şartların herhangi birini kabul etmiyorsanız, lütfen Siteyi ve sunduğumuz dijital hizmetleri kullanmayı durdurun.

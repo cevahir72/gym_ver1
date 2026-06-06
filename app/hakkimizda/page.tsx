@@ -75,7 +75,7 @@ export default function HakkimizdaPage() {
             </h2>
             <div className="space-y-6 text-on-surface-variant">
               <p className="font-body-md text-body-md">
-                COOL KIDS SPORT CENTER olarak, sporun sadece fiziksel bir
+                COOL KIDS SPORTS CENTER olarak, sporun sadece fiziksel bir
                 aktivite değil, bir yaşam disiplini olduğuna inanıyoruz.
                 Misyonumuz, her çocuğun içindeki yeteneği güvenli ve eğlenceli
                 bir ortamda profesyonel rehberlikle ortaya çıkarmaktır.

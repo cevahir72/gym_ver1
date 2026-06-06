@@ -81,7 +81,7 @@ export default function SporlarPage() {
             Spor Branşlarımız
           </h1>
           <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto">
-            COOL KIDS SPORT CENTER'da her yaşa ve her yeteneğe uygun, profesyonel
+            COOL KIDS SPORTS CENTER'da her yaşa ve her yeteneğe uygun, profesyonel
             antrenörler eşliğinde hayallerinizi gerçekleştireceğiniz spor
             branşları sizi bekliyor.
           </p>

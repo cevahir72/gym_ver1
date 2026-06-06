@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-16 py-16 max-w-7xl mx-auto">
         <div>
           <div className="font-headline-md text-headline-md text-on-primary mb-6">
-            Cool Kids Sport Center
+            Cool Kids Sports Center
           </div>
           <p className="text-white/80 opacity-80 font-body-md max-w-xs mb-6">
             Türkiye'nin en modern altyapısına sahip çocuk spor merkezi. Disiplin,
@@ -53,7 +53,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10 text-center py-6">
         <p className="text-white/60 opacity-60 font-caption text-caption">
-          &copy; 2024 Cool Kids Sport Center. All Rights Reserved.
+          &copy; 2024 Cool Kids Sports Center. All Rights Reserved.
         </p>
       </div>
     </footer>

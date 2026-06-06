@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Cool Kids Sport Center",
+  title: "Cool Kids Sports Center",
   description: "Çocuk spor merkezi için modern, responsive bir Next.js landing page.",
 };
 

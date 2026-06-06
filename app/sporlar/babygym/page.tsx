@@ -36,7 +36,7 @@ export default function BabyGymPage() {
         >
           <div className="max-w-2xl text-white">
             <span className="inline-block bg-secondary-container text-white px-3 py-1 text-label-md font-label-md uppercase tracking-wider mb-2">
-              COOL KIDS SPORT CENTER
+              COOL KIDS SPORTS CENTER
             </span>
             <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
               Baby Gym:<br />Eğlence Dolu İlk Adımlar

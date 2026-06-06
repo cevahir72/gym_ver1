@@ -40,7 +40,7 @@ export default function PrivacyPage() {
             className="space-y-8 text-on-surface-variant"
           >
             <p className="font-body-md text-body-md">
-              Cool Kids Sport Center ("Biz", "Salonumuz" veya "Şirketimiz") olarak, coolkidssportcenter.com ("Web Sitesi") adresini ziyaret eden kullanıcılarımızın, fitness üyelerimizin ve çocuk spor salonu hizmetlerimizden yararlanan küçüklerin (ve onların velilerinin/vasilerinin) gizliliğine ve kişisel verilerinin korunmasına büyük önem veriyoruz.
+              Cool Kids Sports Center ("Biz", "Salonumuz" veya "Şirketimiz") olarak, coolkidssportcenter.com ("Web Sitesi") adresini ziyaret eden kullanıcılarımızın, fitness üyelerimizin ve çocuk spor salonu hizmetlerimizden yararlanan küçüklerin (ve onların velilerinin/vasilerinin) gizliliğine ve kişisel verilerinin korunmasına büyük önem veriyoruz.
             </p>
             <p className="font-body-md text-body-md">
               Bu Gizlilik Politikası, web sitemizi kullandığınızda veya hizmetlerimiz için bizimle iletişime geçtiğinizde hangi verileri topladığımızı, bu verileri nasıl kullandığımızı, koruduğumuzu ve haklarınızı açıklamaktadır.

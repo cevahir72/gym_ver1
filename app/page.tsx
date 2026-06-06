@@ -272,7 +272,7 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
                 { title: "Cimnastik", label: "Esneklik ve denge", icon: "🤸", slug: "cimnastik" },
                 { title: "Çocuk Fitness", label: "Özel güç programı", icon: "🏋️", slug: "cfitness" },
                 { title: "Taekwondo", label: "Disiplin ve odaklanma", icon: "🥋", slug: "taekwondo" },
-                { title: "Baby Gym", label: "0-3 yaş motor beceri", icon: "👶", slug: "babygym" },
+                { title: "Baby Gym", label: "1.5-4 yaş motor beceri", icon: "👶", slug: "babygym" },
                 { title: "Okçuluk", label: "Odaklanma ve sabır", icon: "🏹", slug: "okculuk" },
                 { title: "Yetişkin Fitness", label: "Ebeveynler için özel seans", icon: "💪", slug: "fitness" },
               ].map((item, index) => (
