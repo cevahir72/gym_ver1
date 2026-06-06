@@ -155,14 +155,14 @@ export default function BabyGymPage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
           >
             {[
-              {
-                icon: "child_care",
-                title: "0-12 Ay: Keşif",
-                desc: "Duyusal uyarım, karın üstü zamanı aktiviteleri ve ilk yuvarlanma hareketleri üzerine odaklanan başlangıç seviyesi.",
-              },
+              // {
+              //   icon: "child_care",
+              //   title: "0-12 Ay: Keşif",
+              //   desc: "Duyusal uyarım, karın üstü zamanı aktiviteleri ve ilk yuvarlanma hareketleri üzerine odaklanan başlangıç seviyesi.",
+              // },
               {
                 icon: "directions_walk",
                 title: "1-2 Yaş: Adımlar",

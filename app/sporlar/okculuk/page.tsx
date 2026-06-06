@@ -73,7 +73,7 @@ export default function OkculukPage() {
             <div className="space-y-4 font-body-md text-on-surface-variant">
               <p>
                 Okçuluk, bedensel güçten ziyade zihinsel disiplin gerektiren
-                bir sanattır. Elite Junior Sports bünyesinde, çocuklarımıza
+                bir sanattır. Cool Kids Sports Center bünyesinde, çocuklarımıza
                 sadece yay germeyi değil, hedefe kilitlenmeyi ve stres
                 yönetimini öğretiyoruz.
               </p>
