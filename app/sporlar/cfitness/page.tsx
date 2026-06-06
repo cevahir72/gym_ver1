@@ -68,16 +68,24 @@ export default function CfitnessPage() {
             Neden Çocuk Fitness?
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
-            Çocuk fitness programımız, minik sporcuların koordinasyon, güç ve
-            esnekliklerini geliştirirken aynı zamanda sağlıklı yaşam
-            alışkanlıkları kazanmalarını sağlar. Uzman eğitmenlerimiz eşliğinde
-            sunulan bu program, disiplin ve eğlenceyi mükemmel bir dengede
-            buluşturur.
+            Çocuk Fitness; cimnastik, akrobasi, güç, esneklik, dans ve drama
+            gibi birçok farklı disiplini bir araya getiren, çocukların fiziksel
+            ve zihinsel gelişimini destekleyen uluslararası bir spor branşıdır.
+          </p>
+          <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+            Cool Kids Spor Kulübü olarak çocuklarımıza yalnızca spor
+            yaptırmıyor; özgüvenli, disiplinli, güçlü ve sağlıklı bireyler
+            yetiştiriyoruz.
+          </p>
+          <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+            Uzman antrenör kadromuzla uyguladığımız Çocuk Fitness programında,
+            temel hareket becerilerinden ileri seviye sportif performansa kadar
+            kapsamlı bir eğitim sunuyor, yetenekli sporcularımızı ulusal ve
+            uluslararası yarışmalara hazırlıyoruz.
           </p>
           <p className="font-body-md text-body-md text-on-surface-variant mb-8">
-            Modern ekipmanlar ve çocuklara özel tasarlanmış parkurlarımızla, her
-            ders bir macera tadında geçer. Sosyalleşme imkanı bulan çocuklar,
-            özgüven kazanarak hayat boyu sürecek bir spor tutkusu edinirler.
+            Eğlenirken gelişmek, sporla büyümek ve başarıya ulaşmak için sizleri
+            de Cool Kids Spor Kulübü ailesine bekliyoruz.
           </p>
         </motion.div>
         <motion.div
@@ -89,7 +97,7 @@ export default function CfitnessPage() {
         >
           <img
             className="w-full h-full object-cover"
-            src="/baby-2.webp"
+            src="/cfittnes-2.webp"
           />
         </motion.div>
       </section>

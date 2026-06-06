@@ -416,7 +416,7 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
                 },
                 {
                   name: "Mehmet Korkmaz",
-                  comment: "Oğlum basketbol grubuna başladığından beri hem boyu uzadı hem de kendine güveni arttı.",
+                  comment: "Oğlum taekwondo grubuna başladığından beri hem dikkati hem de kendine güveni arttı.",
                 },
                 {
                   name: "Emel Kara",
