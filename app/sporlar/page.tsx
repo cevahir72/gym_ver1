@@ -24,6 +24,13 @@ const sports = [
     slug: "cimnastik",
   },
   {
+    title: "Aerobik Cimnastik",
+    desc: "Müzik eşliğinde güç, esneklik, denge, koordinasyon ve ritim becerilerini geliştiren dinamik bir spor branşı.",
+    img: "/aerobic-gym-cover.webp",
+    popular: false,
+    slug: "aerobik-cimnastik",
+  },
+  {
     title: "Baby Gym",
     desc: "Miniklerin ilk adımlarını sporla atmasını sağlıyoruz. Ebeveyn katılımlı derslerle motor gelişimi ve eğlence bir arada.",
     img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAdvOUPdxWm67GxCotL_r4foBHennuWrx8mDg7J6SybAl5QwibEAFAUvOKL3OhWnp-9r39q0Y2U15pVCEYX0WtVWMDt463PDxkrrJ8_VKsSnPsc6b8C7ke89MniaD1FYXoQC8c77XwTWGRBfAo6hi0AfWjka57fJduV0VJb_GAt0Piiy68wu2VhT3SnBD0W53jhpfySbORGh_r2Sga9x4EOtDCZEs_TF22CpvHWDVOotEnKQU8AfAdXIsCLDAst0auBE5yosoo1Px_u",
@@ -105,11 +112,20 @@ export default function SporlarPage() {
               className="bg-surface-container-lowest border border-outline-variant overflow-hidden flex flex-col group h-full hover:-translate-y-2 transition-transform duration-300"
             >
               <div className="relative h-64 overflow-hidden">
-                <img
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  src={sport.img}
-                  alt={sport.title}
-                />
+                {sport.img ? (
+                  <img
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    src={sport.img}
+                    alt={sport.title}
+                  />
+                ) : (
+                  <div
+                    className="flex h-full items-center justify-center bg-primary/10 text-6xl"
+                    aria-hidden="true"
+                  >
+                    🤸‍♀️
+                  </div>
+                )}
                 {sport.popular && (
                   <div className="absolute top-4 left-4 bg-secondary-container text-on-primary px-3 py-1 font-label-md text-caption uppercase">
                     En Popüler

@@ -275,6 +275,7 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
                 { title: "Baby Gym", label: "1.5-4 yaş motor beceri", icon: "👶", slug: "babygym" },
                 { title: "Okçuluk", label: "Odaklanma ve sabır", icon: "🏹", slug: "okculuk" },
                 { title: "Yetişkin Fitness", label: "Ebeveynler için özel seans", icon: "💪", slug: "fitness" },
+                { title: "Aerobik Cimnastik", label: "Müzik, ritim ve hareket", icon: "🤸‍♀️", slug: "aerobik-cimnastik" },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -521,11 +522,13 @@ ${wantsTrial ? "Evet" : "Hayır"} - Ücretsiz Deneme Dersi Almak İstiyoruz.`
 
                 <div className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_20px_40px_rgba(27,43,94,0.08)]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.927650701017!2d32.76344271553948!3d39.96661457942543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d348dfa7c51c0f%3A0x0000000000000000!2zQsO8Z8O2Y2EsIEV0aW1lc3RndXQsIEFuaySxYQ!5e0!3m2!1str!2str!4v1710000000000"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.1778723192097!2d32.64914457638301!3d39.91503548602073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3397289b0c6ff%3A0xd53d67b58884c80b!2sCool%20Kids%20Sports%20Center!5e0!3m2!1str!2sus!4v1794400063784!5m2!1str!2sus"
+                    width="600"
+                    height="450"
                     className="h-72 w-full border-0"
                     allowFullScreen
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
+                    referrerPolicy="strict-origin-when-cross-origin"
                   />
                 </div>
               </motion.div>
